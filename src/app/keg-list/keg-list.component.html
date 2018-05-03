@@ -1,6 +1,6 @@
-<div *ngFor="let currentKeg of kegs">
+<div *ngFor="let currentKeg of childKegList">
   <div class="card">
-    <div id="kegger" [class]="brandPriorityColor(currentKeg)">{{currentKeg.brand}} --- {{currentKeg.name}}<br>{{currentKeg.price}} Pints: {{currentKeg.pints}} <br>{{currentKeg.content}} <button (click)="sellKeg(currentKeg)">Sell a Pint!</button>
+    <div id="kegger" [class]="brandPriorityColor(currentKeg)">{{currentKeg.brand}} --- {{currentKeg.name}}<br>{{currentKeg.price}} Pints: {{currentKeg.pints}} <br>{{currentKeg.content}} <button (click)="sellButtonClicked(currentKeg)">Sell a Pint!</button>
     </div>
   </div>
 </div>
