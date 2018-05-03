@@ -5,4 +5,4 @@
 </div>
 <h2 id="header">{{header}}</h2>
 
-<app-keg-list [childKegList]="masterKegList"></app-keg-list>
+<app-keg-list [childKegList]="masterKegList" (clickSender)="sellKeg($event)"></app-keg-list>

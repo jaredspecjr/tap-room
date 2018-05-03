@@ -9,14 +9,9 @@ import { Keg } from '../models/keg.model'
 export class KegListComponent {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
-  // selectedKeg: Keg = this.childKegList[0];
-  sellButtonClicked(clickedKeg) {
-    this.selectedKeg = clickedKeg;
-    clickedKeg.pints -= 1;
-    if(clickedKeg.pints <= 10){
-      clickedKeg.brandPriority = 0;
-    }
-    console.log(clickedKeg.pints);
+
+  sellButtonClicked(kegToEdit: Keg){
+    this.clickSender.emit(kegToEdit);
   }
   brandPriorityColor(currentKeg){
     if (currentKeg.brandPriority === 3){
