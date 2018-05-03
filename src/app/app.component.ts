@@ -6,14 +6,17 @@ import { Keg } from './models/keg.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Brewfest';
   header: string = "Brewery Bro's";
   kegs: Keg[] = [
-    new Keg("Stout", "Guinness", "$5.00", "ABV: 3.8%" ),
-    new Keg("Ale", "Newcastle", "$4.00", "ABV: 4.0%" ),
-    new Keg("Lager", "Yuengling", "$2.50", "ABV: 2.5%" )
+    new Keg("Guinness", "Stout", "$5.00", "ABV: 3.8%", 124, 3 ),
+    new Keg("Newcastle", "Ale", "$4.00", "ABV: 4.0%", 124, 2 ),
+    new Keg("Yuengling", "Lager", "$2.50", "ABV: 2.5%", 124, 1 )
   ];
-  editKeg() {
-    alert("Time to edit a keg!");
+  selectedKeg: Keg = this.kegs[0];
+
+  sellKeg(clickedKeg) {
+    this.selectedKeg = clickedKeg;
+    clickedKeg.pints -= 1;
   }
 }

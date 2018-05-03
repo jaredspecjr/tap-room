@@ -1,0 +1,16 @@
+.card {
+  max-width: 300px;
+  min-width: 300px;
+  font-size: 25px;
+  font-family: comic;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+#kegger{
+  padding-left: 8px;
+  border-width: thick;
+  border-style: ridge;
+  border-color: navy;
+}
