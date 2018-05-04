@@ -3,6 +3,10 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<h2 id="header">{{header}}</h2>
-
-<app-keg-list [childKegList]="masterKegList" (clickSender)="sellKeg($event)"></app-keg-list>
+<div id="fullBack" class="card">
+  <h2 id="header">{{header}}</h2>
+  <app-keg-list [childKegList]="masterKegList" (clickSender)="sellKeg($event)"></app-keg-list>
+</div>
+<div>
+  <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
+</div>

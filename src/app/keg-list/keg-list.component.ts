@@ -20,7 +20,7 @@ export class KegListComponent {
       return "bg-warning";
     } else if (currentKeg.brandPriority === 1){
       return "bg-info";
-    } else {
+    } else if (currentKeg.brandPriority === 0){
       return "bg-danger";
     }
   }

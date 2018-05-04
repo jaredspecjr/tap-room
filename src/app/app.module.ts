@@ -4,13 +4,15 @@ import { AppComponent } from './app.component';
 import { KegListComponent } from './keg-list/keg-list.component';
 import { KegSellComponent } from './keg-sell/keg-sell.component';
 import { FormsModule } from '@angular/forms';
+import { NewKegComponent } from './new-keg/new-keg.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     KegListComponent,
-    KegSellComponent
+    KegSellComponent,
+    NewKegComponent
   ],
   imports: [
     BrowserModule,

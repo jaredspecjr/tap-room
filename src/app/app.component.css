@@ -1,9 +1,16 @@
 #header{
-  background-color: brown;
+  background-color: silver;
   max-width: 300px;
   min-width: 300px;
   border-radius: 50%;
   border-style: double;
   text-align: center;
   padding: 10px;
+}
+#fullBack{
+  background-color: #472a00;
+  max-width: 304px;
+  min-width: 304px;
+  border-style: dashed;
+  padding-top: 10px;
 }
